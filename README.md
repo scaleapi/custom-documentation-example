@@ -1,10 +1,10 @@
- Welcome to Beautiful Docs!
+# Welcome to Beautiful Docs!
  
 In this example you'll find an easy and slick way to implement your [Readme](https://readme.com/) content in a custom front-end using [Next.js](https://nextjs.org/) and [Tailwind](https://tailwindcss.com/).
 
 ## Getting Started
 
-# Install
+### Install
 
 ```bash
 yarn install
@@ -12,7 +12,7 @@ yarn install
 npm install
 ```
 
-# Run
+### Run
 
 ```bash
 yarn dev
