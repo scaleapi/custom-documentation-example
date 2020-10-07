@@ -1,0 +1,11 @@
+@media (min-width: 992px) {
+  .bodyContent {
+    box-shadow: -2px 2px 2px rgba(74, 74, 139, 0.01), -3px 4px 3px rgba(74, 74, 139, 0.03);
+  }
+}
+
+.inputWrapper {
+  width: 50%;
+  max-width: 288px;
+  flex-shrink: 1;
+}

@@ -1,18 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ Welcome to Beautiful Docs!
+ 
+In this example you'll find an easy and slick way to implement your [Readme](https://readme.com/) content in a custom front-end using [Next.js](https://nextjs.org/) and [Tailwind](https://tailwindcss.com/).
 
 ## Getting Started
 
-First, run the development server:
+# Install
 
 ```bash
-npm run dev
+yarn install
 # or
-yarn dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Run
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+# or
+npm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result, this will redirect you to [http://localhost:3000/docs](http://localhost:3000/docs) where you'll be able to read the instructions on how to connect and modify the example.
 
 ## Learn More
 
@@ -22,6 +30,15 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+To learn more about Tailwind, take a look at the following resources:
+
+- [Tailwind Documentation](https://tailwindcss.com/docs/installation) - learn about Tailwind customization features.
+
+To learn more about Readme, take a look at the following resources:
+
+- [Readme Documentation](https://docs.readme.com/developers/reference/intro) - learn about Readme features and API.
+
 
 ## Deploy on Vercel
 

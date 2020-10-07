@@ -1,0 +1,96 @@
+.navTrigger {
+  width: 24px;
+  height: 30px;
+  position: relative;
+  background: transparent;
+  border: none;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.navTrigger {
+  @media only screen and (min-width: 992px) {
+    display: none;
+  }
+}
+
+.navTrigger:focus {
+  outline: 0;
+}
+.navTrigger:hover span,
+.navTrigger:hover span:before,
+.navTrigger:hover span:after {
+  @apply bg-gray-900;
+}
+
+.navTrigger:before {
+  content: '';
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+.navTrigger span {
+  display: block;
+  position: relative;
+}
+.navTrigger span:before,
+.navTrigger span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+.navTrigger span:before {
+  top: -6px;
+}
+.navTrigger span:after {
+  bottom: -6px;
+}
+.navTrigger span,
+.navTrigger span:before,
+.navTrigger span:after {
+  width: 100%;
+  height: 2px;
+  @apply bg-gray-900;
+  transition: all 0.4s ease;
+}
+
+.navTriggerOpen:before {
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+}
+.navTriggerOpen span {
+  background: transparent !important;
+}
+.navTriggerOpen span:before {
+  top: 0;
+  transform: rotate(225deg);
+}
+.navTriggerOpen span:after {
+  bottom: 0;
+  transform: rotate(-225deg);
+}
+
+@screen dark {
+  .navTrigger:hover span,
+  .navTrigger:hover span:before,
+  .navTrigger:hover span:after {
+    @apply bg-white;
+  }
+
+  .navTrigger span,
+  .navTrigger span:before,
+  .navTrigger span:after {
+    @apply bg-white;
+  }
+}

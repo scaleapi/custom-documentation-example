@@ -1,0 +1,29 @@
+.wrapper em {
+  background: #fbe290;
+  font-style: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  .wrapper em {
+    background: #807855;
+  }
+}
+
+.link {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.badge {
+  font-size: 1.2rem;
+  height: 24px;
+  line-height: 24px;
+}
+
+.post {
+  background: #ffca28;
+}
+
+.get {
+  background: #72ce7b;
+}
