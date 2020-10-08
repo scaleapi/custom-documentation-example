@@ -22,6 +22,26 @@ npm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result, this will redirect you to [http://localhost:3000/docs](http://localhost:3000/docs) where you'll be able to read the instructions on how to connect and modify the example.
 
+### Set up environment variables
+
+In the Readme dashboard go get your API KEY in the Configuration > API KEY tab.
+
+Next, copy the `.env.local.example` file in this directory to `.env.local` (which will be ignored by Git):
+
+```bash
+cp .env.local.example .env.local
+```
+
+Then set each variable on `.env.local`:
+
+- `README_AUTH_TOKEN` should be the API token you just copied.
+
+Your `.env.local` file should look like this:
+
+```bash
+README_AUTH_TOKEN=...
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
