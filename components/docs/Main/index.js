@@ -1,5 +1,6 @@
 import React from 'react';
-import moment from 'moment';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 
 import Sidebar from 'docs/components/docs/Sidebar';
 import BodyContent from 'docs/components/docs/BodyContent';
@@ -7,33 +8,36 @@ import IndexPage from 'docs/components/docs/IndexPage';
 
 import styles from './Main.module.css';
 
-const Main = ({ topLevelNavigation, subLevelNavigation, title, content, slug, updated }) => (
-  <div className={styles.mainContent}>
-    <div className={`${styles.mainGrid} container min-h-screen`}>
-      <Sidebar
-        topLevelNavigation={topLevelNavigation}
-        subLevelNavigation={subLevelNavigation}
-        slug={slug}
-      />
-      <BodyContent>
-        {content ? (
-          <div className={`${styles.content} pt-4`}>
-            <div className="font-maax text-4xl text-black dark:text-white pb-4 mb-4 border-b border-gray-300 dark:border-gray-800">
-              {title}
+const Main = ({ topLevelNavigation, subLevelNavigation, title, content, slug, updated }) => {
+  dayjs.extend(relativeTime);
+  return (
+    <div className={styles.mainContent}>
+      <div className={`${styles.mainGrid} container min-h-screen`}>
+        <Sidebar
+          topLevelNavigation={topLevelNavigation}
+          subLevelNavigation={subLevelNavigation}
+          slug={slug}
+        />
+        <BodyContent>
+          {content ? (
+            <div className={`${styles.content} pt-4`}>
+              <div className="font-maax text-4xl text-black dark:text-white pb-4 mb-4 border-b border-gray-300 dark:border-gray-800">
+                {title}
+              </div>
+              <div dangerouslySetInnerHTML={{ __html: content }} />
+              <div className="text-sm text-gray-700 dark:text-gray-300 pt-2 mt-6 flex items-center border-t border-gray-300 dark:border-gray-800">
+                <span className="mr-1">{calendarIcon}</span>
+                Updated {dayjs(updated).fromNow()}
+              </div>
             </div>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
-            <div className="text-sm text-gray-700 dark:text-gray-300 pt-2 mt-6 flex items-center border-t border-gray-300 dark:border-gray-800">
-              <span className="mr-1">{calendarIcon}</span>
-              Updated {moment(updated).fromNow()}
-            </div>
-          </div>
-        ) : (
-          <IndexPage />
-        )}
-      </BodyContent>
+          ) : (
+            <IndexPage />
+          )}
+        </BodyContent>
     </div>
   </div>
-);
+  )
+}
 
 export const calendarIcon = (
   <svg

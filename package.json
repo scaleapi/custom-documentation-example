@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "moment": "^2.29.0",
+    "dayjs": "^1.9.1",
     "next": "9.5.3",
     "nprogress": "^0.2.0",
     "postcss-preset-env": "^6.7.0",

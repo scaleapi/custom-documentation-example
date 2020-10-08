@@ -1,4 +1,5 @@
 import React from 'react';
+import Error from 'next/error'
 
 import {
   getDocEntry,
@@ -15,12 +16,16 @@ export async function getStaticPaths() {
   try {
     pages = await getDocsEntries();
   } catch (error) {
-    console.log('eo');
+    throw error;
   }
 
-  const paths = pages.map(page => ({
-    params: { slug: page.slug }
-  }));
+  let paths = [];
+
+  if (pages) {
+    paths = pages.map(page => ({
+      params: { slug: page.slug }
+    }));
+  }
 
   return {
     paths,
@@ -36,7 +41,7 @@ export async function getStaticProps({ params }) {
     props.content = await getDocEntry(params.slug);
     props.slug = params.slug;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 
   return { props, revalidate: 1 };
@@ -44,11 +49,7 @@ export async function getStaticProps({ params }) {
 
 const Docs = ({ topLevelNavigation, subLevelNavigation, content, slug }) => {
   if (!content) {
-    return (
-      <div className="flex items-center justify-center h-screen w-screen">
-        <Spinner size="lg" />
-      </div>
-    );
+    return <Error statusCode={404} />;
   }
   return (
     <DocsContainer

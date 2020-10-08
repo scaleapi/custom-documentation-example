@@ -43,6 +43,7 @@ const Sidebar = ({ topLevelNavigation, subLevelNavigation, slug }) => {
           </div>
           {topLevelNavigation && topLevelNavigation.map((item, i) => (
             <Accordion
+              key={item.title}
               title={item.title}
               items={subLevelNavigation[i]}
               show={isOpen === i || subLevelNavigation[i].find(item => item.slug === slug)}

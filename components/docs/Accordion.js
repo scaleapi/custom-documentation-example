@@ -26,9 +26,9 @@ const Accordion = ({ title, items, show, slug, index, toggle }) => {
       >
         <ul className="pt-2 pl-6 pb-3">
           {items.map(item => (
-            <>
+            <li key={`${item.title}`}>
               {item.slug && (
-                <li className="mb-1 last:mb-0" key={`${item.title}`}>
+                <div className="mb-1 last:mb-0" key={`${item.title}`}>
                   <Link href="/docs/[slug]" as={`/docs/${item.slug}`}>
                     <a className="group relative text-sm font-normal text-gray-800 dark:text-gray-400">
                       <span
@@ -65,9 +65,9 @@ const Accordion = ({ title, items, show, slug, index, toggle }) => {
                       </span>
                     </a>
                   </Link>
-                </li>
+                </div>
               )}
-            </>
+            </li>
           ))}
         </ul>
       </div>

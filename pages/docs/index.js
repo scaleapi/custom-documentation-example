@@ -10,7 +10,7 @@ export async function getStaticProps() {
     props.topLevelNavigation = await getDocsCategories();
     props.subLevelNavigation = await getDocsSubcategories();
   } catch (error) {
-    console.log(error);
+    throw error;
   }
   return { props, revalidate: 1 };
 }
