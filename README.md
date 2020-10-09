@@ -62,6 +62,6 @@ To learn more about Readme, take a look at the following resources:
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import/git?c=1&s=https://github.com/scaleapi/custom-documentation-example&env=README_AUTH_TOKEN&envDescription=Required%20to%20connect%20the%20app%20with%20ReadMe&envLink=https://github.com/scaleapi/custom-documentation-example%23set-up-environment-variables) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
