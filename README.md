@@ -1,4 +1,6 @@
-# Welcome to Beautiful Docs!
+# Welcome to Custom Documentation Example!
+
+![custom ui documentation](https://user-images.githubusercontent.com/18171127/96633996-44c2cc00-12f0-11eb-999b-ae9330d0a6c5.png)
  
 In this example you'll find an easy and slick way to implement your [Readme](https://readme.com/) content in a custom front-end using [Next.js](https://nextjs.org/) and [Tailwind](https://tailwindcss.com/).
 
