@@ -19,7 +19,7 @@ npm install
 ```bash
 yarn dev
 # or
-npm dev
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result, this will redirect you to [http://localhost:3000/docs](http://localhost:3000/docs) where you'll be able to read the instructions on how to connect and modify the example.
