@@ -10,7 +10,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "dayjs": "^1.9.1",
-    "next": "9.5.3",
+    "next": "15.2.3",
     "nprogress": "^0.2.0",
     "postcss-preset-env": "^6.7.0",
     "react": "16.13.1",
